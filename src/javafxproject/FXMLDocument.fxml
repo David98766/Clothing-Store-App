@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="449.0" prefWidth="397.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxproject.FXMLDocumentController">
+   <children>
+      <Button fx:id="btnCustomerLogin" layoutX="129.0" layoutY="257.0" mnemonicParsing="false" onAction="#handlebtnCustomerLogin" prefHeight="26.0" prefWidth="129.0" text="Customer Login" textFill="#a305ed" />
+      <TextField fx:id="txtUserName" layoutX="115.0" layoutY="114.0" prefHeight="26.0" prefWidth="161.0" promptText="Enter your username" />
+      <PasswordField fx:id="pwfLogin" layoutX="114.0" layoutY="159.0" prefHeight="26.0" prefWidth="162.0" promptText="Enter your password" />
+      <Button fx:id="btnSignUp" layoutX="106.0" layoutY="402.0" mnemonicParsing="false" onAction="#handlebtnSignUp" prefHeight="26.0" prefWidth="175.0" text="New user? Sign Up!" textFill="#a305ed" />
+      <Label layoutX="123.0" layoutY="14.0" prefHeight="63.0" prefWidth="207.0" text="Forever 22" textFill="#ca7df9">
+         <font>
+            <Font name="Baskerville Old Face" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="105.0" layoutY="77.0" prefHeight="18.0" prefWidth="226.0" text="Please enter your login details" textFill="ROYALBLUE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Button fx:id="btnClear" layoutX="165.0" layoutY="212.0" mnemonicParsing="false" onAction="#handlebtnClear" text="Clear" textFill="#a305ed" />
+      <Button fx:id="btnManagerLogin" layoutX="129.0" layoutY="353.0" mnemonicParsing="false" onAction="#handlebtnManagerLogin" prefHeight="26.0" prefWidth="130.0" text="Manager Login" textFill="#a305ed" />
+      <Label fx:id="lblLoginMessage" alignment="CENTER" layoutX="3.0" layoutY="300.0" prefHeight="18.0" prefWidth="390.0" text="Manager Login is for Staff only" textAlignment="CENTER" textFill="ROYALBLUE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

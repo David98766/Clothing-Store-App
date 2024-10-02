@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="593.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxproject.ManagerPortalFXMLController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <BorderPane layoutX="213.0" layoutY="135.0" prefHeight="505.6" prefWidth="911.2" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <left>
+                  <AnchorPane prefHeight="527.0" prefWidth="251.0" style="-fx-background-color: #4169e1;" BorderPane.alignment="CENTER">
+                     <children>
+                        <Button fx:id="btnUserAccounts" layoutX="11.0" layoutY="118.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="42.0" prefWidth="224.0" style="-fx-background-color: #ca7df9;" text="User Accounts" />
+                        <Button fx:id="btnUserComplaints" layoutX="10.0" layoutY="246.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="42.0" prefWidth="226.0" style="-fx-background-color: #ca7df9;" text="User Complaints" />
+                        <Button fx:id="btnProductOverview" layoutX="10.0" layoutY="181.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="42.0" prefWidth="226.0" style="-fx-background-color: #ca7df9;" text="Product Overview" />
+                        <Button fx:id="btnBack" layoutX="10.0" layoutY="381.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="42.0" prefWidth="226.0" style="-fx-background-color: #ca7df9;" text="Back" />
+                        <Label layoutX="28.0" layoutY="43.0" text="Manager Screen" textFill="#ca7df9">
+                           <font>
+                              <Font name="Baskerville Old Face" size="30.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btnLogOut" layoutX="12.0" layoutY="453.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="42.0" prefWidth="226.0" style="-fx-background-color: #ca7df9;" text="Log out" />
+                        <Button fx:id="btnUserOrders" layoutX="10.0" layoutY="311.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="42.0" prefWidth="226.0" style="-fx-background-color: #ca7df9;" text="User Orders" />
+                        <Label fx:id="lblDate" layoutX="61.0" layoutY="5.0" prefHeight="18.0" prefWidth="123.0" text="Label" textAlignment="CENTER" textFill="#cadf0b">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblTime" layoutX="61.0" layoutY="23.0" prefHeight="18.0" prefWidth="123.0" text="Label" textAlignment="CENTER" textFill="#cadf0b">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </left>
+               <center>
+                  <AnchorPane prefHeight="594.0" prefWidth="902.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane fx:id="anchUserWindow" layoutX="82.0" layoutY="183.0" prefHeight="594.0" prefWidth="1083.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <TextArea fx:id="txtUsers" layoutX="1.0" layoutY="355.0" prefHeight="239.0" prefWidth="1151.0" />
+                              <BorderPane layoutX="4.0" prefHeight="62.0" prefWidth="1145.0" style="-fx-background-color: #4169e1;">
+                                 <center>
+                                    <Label prefHeight="36.0" prefWidth="218.0" text="User Accounts:" textFill="#ca7df9" BorderPane.alignment="CENTER">
+                                       <font>
+                                          <Font name="Baskerville Old Face" size="30.0" />
+                                       </font>
+                                    </Label>
+                                 </center>
+                              </BorderPane>
+                              <Line endX="27.5999755859375" endY="-87.59999084472656" layoutX="327.0" layoutY="150.0" startX="27.5999755859375" startY="205.0" />
+                              <Label layoutX="53.0" layoutY="104.0" prefHeight="18.0" prefWidth="316.0" text="Use This Section to search for Specific Users:" textFill="ROYALBLUE" />
+                              <TextField fx:id="txtUserSearch" layoutX="91.0" layoutY="153.0" prefHeight="26.0" prefWidth="224.0" />
+                              <Label layoutX="14.0" layoutY="150.0" prefHeight="18.0" prefWidth="78.0" text="Search Bar:" textFill="#ca7df9">
+                                 <font>
+                                    <Font name="Baskerville Old Face" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="550.0" layoutY="95.0" prefHeight="18.0" prefWidth="451.0" text="Use this section for updating and deleting details about users:" textFill="ROYALBLUE" />
+                              <TextField fx:id="txtUsername" layoutX="1016.0" layoutY="62.0" prefHeight="26.0" prefWidth="137.0" />
+                              <TextField fx:id="txtEmail" layoutX="423.0" layoutY="113.0" prefHeight="26.0" prefWidth="138.0" />
+                              <TextField fx:id="txtFirstName" layoutX="423.0" layoutY="154.0" prefHeight="26.0" prefWidth="138.0" />
+                              <TextField fx:id="txtPassword" layoutX="973.0" layoutY="113.0" prefHeight="26.0" prefWidth="141.0" />
+                              <TextField fx:id="txtLastName" layoutX="707.0" layoutY="154.0" prefHeight="26.0" prefWidth="138.0" />
+                              <TextField fx:id="txtHouseNumber" layoutX="973.0" layoutY="192.0" prefHeight="26.0" prefWidth="141.0" />
+                              <Label layoutX="355.0" layoutY="118.0" />
+                              <Label layoutX="953.0" layoutY="65.0" prefHeight="18.0" prefWidth="57.0" text="Username:" textFill="#ca7df9">
+                                 <font>
+                                    <Font name="Baskerville Old Face" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="360.0" layoutY="158.0" prefHeight="18.0" prefWidth="57.0" text="First name:" textFill="#ca7df9">
+                                 <font>
+                                    <Font name="Baskerville Old Face" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="360.0" layoutY="113.0" prefHeight="18.0" prefWidth="57.0" text="Email:" textFill="#ca7df9">
+                                 <font>
+                                    <Font name="Baskerville Old Face" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="609.0" layoutY="157.0" prefHeight="18.0" prefWidth="57.0" text="Last name:" textFill="#ca7df9">
+                                 <font>
+                                    <Font name="Baskerville Old Face" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="895.0" layoutY="117.0" prefHeight="18.0" prefWidth="57.0" text="Password:" textFill="#ca7df9">
+                                 <font>
+                                    <Font name="Baskerville Old Face" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="866.0" layoutY="196.0" prefHeight="18.0" prefWidth="83.0" text="House Number:" textFill="#ca7df9">
+                                 <font>
+                                    <Font name="Baskerville Old Face" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="txtCity" layoutX="423.0" layoutY="189.0" prefHeight="26.0" prefWidth="139.0" />
+                              <TextField fx:id="txtStreetName" layoutX="707.0" layoutY="192.0" prefHeight="26.0" prefWidth="141.0" />
+                              <Label layoutX="360.0" layoutY="192.0" prefHeight="18.0" prefWidth="57.0" text="City:" textFill="#ca7df9">
+                                 <font>
+                                    <Font name="Baskerville Old Face" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="891.0" layoutY="154.0" prefHeight="18.0" prefWidth="57.0" text="Country:" textFill="#ca7df9">
+                                 <font>
+                                    <Font name="Baskerville Old Face" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="600.0" layoutY="196.0" prefHeight="18.0" prefWidth="74.0" text="Street Name:" textFill="#ca7df9">
+                                 <font>
+                                    <Font name="Baskerville Old Face" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="txtShoeSize" layoutX="707.0" layoutY="228.0" prefHeight="26.0" prefWidth="141.0" />
+                              <TextField fx:id="txtWaistSize" layoutX="973.0" layoutY="229.0" prefHeight="26.0" prefWidth="142.0" />
+                              <Label layoutX="360.0" layoutY="232.0" prefHeight="18.0" prefWidth="57.0" text="Shirt Size:" textFill="#ca7df9">
+                                 <font>
+                                    <Font name="Baskerville Old Face" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="609.0" layoutY="232.0" prefHeight="18.0" prefWidth="57.0" text="Shoe Size:" textFill="#ca7df9">
+                                 <font>
+                                    <Font name="Baskerville Old Face" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="891.0" layoutY="232.0" prefHeight="18.0" prefWidth="57.0" text="Waist Size:" textFill="#ca7df9">
+                                 <font>
+                                    <Font name="Baskerville Old Face" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="txtCardNumber" layoutX="707.0" layoutY="270.0" prefHeight="26.0" prefWidth="142.0" />
+                              <Label layoutX="360.0" layoutY="274.0" prefHeight="18.0" prefWidth="57.0" text="Card Type:" textFill="#ca7df9">
+                                 <font>
+                                    <Font name="Baskerville Old Face" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="597.0" layoutY="274.0" prefHeight="18.0" prefWidth="81.0" text="Card Number:" textFill="#ca7df9">
+                                 <font>
+                                    <Font name="Baskerville Old Face" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="889.0" layoutY="273.0" prefHeight="18.0" prefWidth="72.0" text="Expiry Date:" textFill="#ca7df9">
+                                 <font>
+                                    <Font name="Baskerville Old Face" size="12.0" />
+                                 </font>
+                              </Label>
+                              <ChoiceBox fx:id="chxShirtSize" layoutX="423.0" layoutY="229.0" prefWidth="150.0" />
+                              <ChoiceBox fx:id="chxCardType" layoutX="423.0" layoutY="270.0" prefWidth="150.0" />
+                              <DatePicker fx:id="dpExpiryDate" layoutX="973.0" layoutY="270.0" prefHeight="26.0" prefWidth="142.0" />
+                              <Button fx:id="btnUpdate" layoutX="748.0" layoutY="318.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="202.0" text="Update" />
+                              <Button fx:id="btnDelete" layoutX="125.0" layoutY="261.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="155.0" text="Delete" />
+                              <Button fx:id="btnSearch" layoutX="126.0" layoutY="215.0" mnemonicParsing="false" onAction="#handlebtnSearch" prefHeight="26.0" prefWidth="154.0" text="Search" />
+                              <Label layoutX="14.0" layoutY="163.0" prefHeight="18.0" prefWidth="78.0" text="(Username)" textFill="#ca7df9">
+                                 <font>
+                                    <Font name="Baskerville Old Face" size="12.0" />
+                                 </font>
+                              </Label>
+                              <ChoiceBox fx:id="chxContinent" layoutX="977.0" layoutY="153.0" prefHeight="26.0" prefWidth="140.0" />
+                              <Button fx:id="btnClearSearch" layoutX="125.0" layoutY="305.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="155.0" text="Clear" />
+                              <Button fx:id="btnClearEdit" layoutX="436.0" layoutY="318.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="201.0" text="Clear" />
+                              <Label fx:id="lblCardNumber" layoutX="704.0" layoutY="298.0" prefHeight="12.0" prefWidth="162.0" text="Label" textFill="#d90c0c">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font></Label>
+                              <Label fx:id="lblWaistSize" layoutX="972.0" layoutY="252.0" prefHeight="18.0" prefWidth="122.0" text="Label" textFill="#d90c0c">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font></Label>
+                              <Label layoutX="360.0" layoutY="66.0" prefHeight="18.0" prefWidth="604.0" text="Please enter username of the account you want to update.Usernames cannot be updated." textFill="ROYALBLUE" />
+                              <Label fx:id="lblShoeSize" layoutX="704.0" layoutY="253.0" prefHeight="18.0" prefWidth="100.0" text="Label" textFill="#d90c0c">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="anchProductOverview" layoutX="9.0" layoutY="11.0" prefHeight="578.0" prefWidth="1140.0" visible="false">
+                           <children>
+                              <BorderPane layoutX="10.0" prefHeight="55.0" prefWidth="1127.0" style="-fx-background-color: #4169e1;">
+                                 <center>
+                                    <Label prefHeight="38.0" prefWidth="226.0" text="Product Overview:" textFill="#ca7df9" BorderPane.alignment="CENTER">
+                                       <font>
+                                          <Font name="Baskerville Old Face" size="30.0" />
+                                       </font>
+                                    </Label>
+                                 </center>
+                              </BorderPane>
+                              <TextArea fx:id="txtProductOverview" layoutY="349.0" prefHeight="225.0" prefWidth="1138.0" />
+                              <Label layoutX="106.0" layoutY="167.0" prefHeight="18.0" prefWidth="86.0" text="Product Name:" textFill="#ca7df9">
+                                 <font>
+                                    <Font name="Baskerville Old Face" size="12.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="cbxProductName" layoutX="226.0" layoutY="164.0" prefWidth="150.0" />
+                              <ComboBox fx:id="cbxMessageText" layoutX="544.0" layoutY="163.0" prefWidth="150.0" />
+                              <Label layoutX="415.0" layoutY="167.0" prefHeight="18.0" prefWidth="86.0" text="Message Text:" textFill="#ca7df9">
+                                 <font>
+                                    <Font name="Baskerville Old Face" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="txtProductPrice" layoutX="870.0" layoutY="163.0" />
+                              <Label layoutX="739.0" layoutY="166.0" prefHeight="18.0" prefWidth="86.0" text="Product Price:" textFill="#ca7df9">
+                                 <font>
+                                    <Font name="Baskerville Old Face" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="btnUpdateProduct" layoutX="450.0" layoutY="221.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="320.0" text="Update" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="anchUserComplaints" layoutX="5.0" layoutY="9.0" prefHeight="582.0" prefWidth="1140.0" visible="false">
+                           <children>
+                              <TextArea fx:id="txtComplaint" layoutX="7.0" layoutY="322.0" prefHeight="255.0" prefWidth="1132.0" />
+                              <BorderPane layoutX="7.0" prefHeight="62.0" prefWidth="1098.0" style="-fx-background-color: #4169e1;">
+                                 <center>
+                                    <Label prefHeight="50.0" prefWidth="239.0" text="User Complaints:" textFill="#ca7df9" BorderPane.alignment="CENTER">
+                                       <font>
+                                          <Font size="30.0" />
+                                       </font>
+                                    </Label>
+                                 </center>
+                              </BorderPane>
+                              <Label layoutX="171.0" layoutY="104.0" prefHeight="27.0" prefWidth="650.0" text="Note to Manager complaints need to be responded too in no more than a week. ">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="332.0" layoutY="155.0" prefHeight="18.0" prefWidth="512.0" text="Please respond using their email provided">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="anchDefaultScreen" layoutX="10.0" layoutY="5.0" prefHeight="566.0" prefWidth="1137.0" visible="false">
+                           <children>
+                              <Label layoutX="429.0" layoutY="113.0" text="Forever 22" textFill="#ca7df9">
+                                 <font>
+                                    <Font name="Baskerville Old Face" size="65.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="420.0" layoutY="213.0" text="Where Fashion">
+                                 <font>
+                                    <Font name="Baskerville Old Face" size="48.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="355.0" layoutY="283.0" text="Meets Inteligent Design">
+                                 <font>
+                                    <Font name="Baskerville Old Face" size="48.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="anchUserOrders" layoutX="9.0" layoutY="5.0" prefHeight="586.0" prefWidth="1139.0">
+                           <children>
+                              <BorderPane layoutX="19.0" prefHeight="70.0" prefWidth="1117.0" style="-fx-background-color: #4169e1;">
+                                 <center>
+                                    <Label prefHeight="50.0" prefWidth="239.0" text="User Orders:" textFill="#ca7df9" BorderPane.alignment="CENTER">
+                                       <font>
+                                          <Font size="30.0" />
+                                       </font>
+                                    </Label>
+                                 </center>
+                              </BorderPane>
+                              <TextArea fx:id="txtOrderView" layoutX="7.0" layoutY="325.0" prefHeight="255.0" prefWidth="1128.0" />
+                              <TextField fx:id="txtOrderSearch" layoutX="600.0" layoutY="191.0" prefHeight="26.0" prefWidth="82.0" promptText="e.g: 9" />
+                              <Label layoutX="503.0" layoutY="147.0" text="Search Orders:" textFill="#ca7df9">
+                                 <font>
+                                    <Font name="Baskerville Old Face" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="btnSearchOrders" layoutX="427.0" layoutY="237.0" mnemonicParsing="false" onAction="#handlebtnSearchOrders" prefHeight="26.0" prefWidth="263.0" text="Search" />
+                              <Button fx:id="btnClearOrderSearch" layoutX="427.0" layoutY="280.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="263.0" text="Clear" />
+                              <Label layoutX="226.0" layoutY="85.0" prefHeight="27.0" prefWidth="674.0" text="Note to Managers refer to this table for any queries on package deliveries ">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="450.0" layoutY="194.0" prefHeight="19.0" prefWidth="79.0" text="Order ID:" textFill="#ca7df9">
+                                 <font>
+                                    <Font name="Baskerville Old Face" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="660.0" prefWidth="803.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxproject.FXMLClothingMainGUI">
+    <children>
+      <ImageView fitHeight="46.0" fitWidth="806.0" layoutY="26.0" pickOnBounds="true">
+         <image>
+            <Image url="@../Images/logo%20blue.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="46.0" fitWidth="200.0" layoutX="23.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/fOREVER%2022%20LOGO.png" />
+         </image>
+      </ImageView>
+      <AnchorPane fx:id="anchStore" layoutY="69.0" prefHeight="582.0" prefWidth="805.0" visible="false">
+         <children>
+            <AnchorPane layoutY="14.0" prefHeight="166.0" prefWidth="800.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="14.0">
+               <children>
+                  <Label fx:id="lblShirts" layoutX="375.0" layoutY="5.0" text="SHIRTS">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <HBox layoutY="117.0" prefHeight="35.0" prefWidth="800.0" spacing="15.0" AnchorPane.bottomAnchor="-8.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <children>
+                        <RadioButton id="btnRedShirt" fx:id="rdbShirtRed" mnemonicParsing="false" prefHeight="18.0" prefWidth="68.0" text="Red" textFill="RED">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="ShirtColour" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton id="btnBlueShirt" fx:id="rdbShirtBlue" mnemonicParsing="false" prefHeight="18.0" prefWidth="66.0" text="Blue" textFill="#3300ff" toggleGroup="$ShirtColour" />
+                        <RadioButton id="btnBlackShirt" fx:id="rdbShirtBlack" mnemonicParsing="false" prefHeight="18.0" prefWidth="72.0" text="Black" toggleGroup="$ShirtColour" />
+                        <RadioButton id="btnWhiteShirt" fx:id="rdbShirtWhite" mnemonicParsing="false" prefHeight="18.0" prefWidth="77.0" text="White" toggleGroup="$ShirtColour">
+                           <textFill>
+                              <LinearGradient endX="1.0" endY="1.0" startX="1.0">
+                                 <stops>
+                                    <Stop>
+                                       <color>
+                                          <Color />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                       <color>
+                                          <Color red="1.0" green="1.0" blue="1.0" />
+                                       </color>
+                                    </Stop>
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                        </RadioButton>
+                        <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                        <ComboBox id="cmbShirtSize" fx:id="cmbSizeShirts" prefWidth="150.0" promptText="Size" visibleRowCount="3" />
+                        <Button fx:id="btnAddShirts" disable="true" minWidth="-Infinity" mnemonicParsing="false" onAction="#handlebtnAddShirts" prefHeight="26.0" prefWidth="60.0" text="Add">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+                  <ScrollPane prefHeight="117.0" prefWidth="800.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="19.0">
+                     <content>
+                        <AnchorPane nodeOrientation="LEFT_TO_RIGHT" prefHeight="118.0" prefWidth="874.0">
+                           <children>
+                              <ImageView fitHeight="75.0" fitWidth="79.0" layoutX="150.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Images/Plain%20white%20shirt.jpg" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fx:id="imgPlainTshirt" fitHeight="75.0" fitWidth="79.0" layoutX="15.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Images/black%20shirt.jpg" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="74.0" fitWidth="74.0" layoutX="284.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Images/ucc%20shirt.jpg" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="81.0" fitWidth="90.0" layoutX="442.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Images/images.jpg" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="78.0" fitWidth="86.0" layoutX="613.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Images/long%20sleeve%20USED.jpg" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="78.0" fitWidth="81.0" layoutX="770.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Images/Graphic%20Tee%20USED.jpg" />
+                                 </image>
+                              </ImageView>
+                              <RadioButton fx:id="rdbPlainTShirt" layoutY="8.0" mnemonicParsing="false" opacity="0.0" prefHeight="70.0" prefWidth="88.0">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="Shirts" />
+                                 </toggleGroup>
+                              </RadioButton>
+                              <RadioButton fx:id="rdbPlainShirt" layoutX="131.0" layoutY="-3.0" mnemonicParsing="false" opacity="0.0" prefHeight="82.0" prefWidth="86.0" toggleGroup="$Shirts" />
+                              <RadioButton fx:id="rdbAdidasTshirt" layoutX="438.0" layoutY="2.0" mnemonicParsing="false" opacity="0.0" prefHeight="81.0" prefWidth="88.0" toggleGroup="$Shirts" />
+                              <RadioButton fx:id="rdbLongSleeve" layoutX="613.0" layoutY="-2.0" mnemonicParsing="false" opacity="0.0" prefHeight="84.0" prefWidth="77.0" toggleGroup="$Shirts" />
+                              <RadioButton fx:id="rdbGraphicTee" layoutX="770.0" layoutY="2.0" mnemonicParsing="false" opacity="0.0" prefHeight="82.0" prefWidth="81.0" toggleGroup="$Shirts" />
+                              <RadioButton fx:id="rdbUCCShirt" alignment="BASELINE_LEFT" layoutX="272.0" layoutY="2.0" mnemonicParsing="false" prefHeight="84.0" prefWidth="91.0" textAlignment="JUSTIFY" toggleGroup="$Shirts" />
+                              <Label fx:id="lblPlainShirt" layoutX="148.0" layoutY="75.0" prefHeight="18.0" prefWidth="135.0" text="Plain Shirt" />
+                              <Label fx:id="lblUCCShirt" layoutX="284.0" layoutY="76.0" prefHeight="18.0" prefWidth="134.0" text="UCC T-Shirt" />
+                              <Label fx:id="lblAdidasTShirt" layoutX="442.0" layoutY="77.0" prefHeight="18.0" prefWidth="150.0" text="Adidas T-Shirt" />
+                              <Label fx:id="lblLongSleeve" layoutX="613.0" layoutY="77.0" prefHeight="18.0" prefWidth="150.0" text="Long Sleeve" />
+                              <Label fx:id="lblGRaphicTee" layoutX="757.0" layoutY="78.0" text="Graphic Tee" />
+                              <Label fx:id="lblPlainTShirt" layoutY="75.0" text="Plain T-Shirt" />
+                              <Label layoutX="789.0" layoutY="78.0" />
+                              <Label fx:id="lblMessageTShirt" layoutX="11.0" layoutY="95.0" prefHeight="18.0" prefWidth="106.0" text="label" AnchorPane.bottomAnchor="5.0" />
+                              <Label fx:id="lblMessagePlainShirt" layoutX="161.0" layoutY="95.0" text="label" AnchorPane.bottomAnchor="5.800000000000011" />
+                              <Label fx:id="lblMessageUCCShirt" layoutX="292.0" layoutY="95.0" text="label" AnchorPane.bottomAnchor="5.800000000000011" />
+                              <Label fx:id="lblAdidasShirt" layoutX="468.0" layoutY="95.0" text="Label" AnchorPane.bottomAnchor="5.800000000000011" />
+                              <Label fx:id="lblMessageLongSleeve" layoutX="626.0" layoutY="95.0" text="label" AnchorPane.bottomAnchor="5.800000000000011" />
+                              <Label fx:id="lblGraphicTee" layoutX="775.0" layoutY="95.0" text="Label" AnchorPane.bottomAnchor="5.800000000000011" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </ScrollPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutY="194.0" prefHeight="177.0" prefWidth="800.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <Label fx:id="lblShirts1" layoutX="374.0" layoutY="5.0" text="PANTS">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <HBox layoutX="-1.0" layoutY="119.0" prefHeight="35.0" prefWidth="806.0" spacing="15.0" AnchorPane.bottomAnchor="-4.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="1.0">
+                     <children>
+                        <RadioButton id="btnRedShirt" fx:id="rdbPantsRed" mnemonicParsing="false" prefHeight="18.0" prefWidth="74.0" text="Red" textFill="RED">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="PantsColour" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton id="btnBlueShirt" fx:id="rdbPantsBlue" mnemonicParsing="false" prefHeight="18.0" prefWidth="78.0" text="Blue" textFill="#3300ff" toggleGroup="$PantsColour" />
+                        <RadioButton id="btnBlackShirt" fx:id="rdbPantsBlack" mnemonicParsing="false" prefHeight="18.0" prefWidth="72.0" text="Black" toggleGroup="$PantsColour" />
+                        <RadioButton id="btnWhiteShirt" fx:id="rdbPantsWhite" mnemonicParsing="false" prefHeight="18.0" prefWidth="82.0" text="White" toggleGroup="$PantsColour">
+                           <textFill>
+                              <LinearGradient endX="1.0" endY="1.0" startX="1.0">
+                                 <stops>
+                                    <Stop>
+                                       <color>
+                                          <Color />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                       <color>
+                                          <Color red="1.0" green="1.0" blue="1.0" />
+                                       </color>
+                                    </Stop>
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                        </RadioButton>
+                        <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                        <Label prefHeight="18.0" prefWidth="111.0" text="Enter a size:" />
+                        <TextField fx:id="txtWaistSize" prefHeight="26.0" prefWidth="46.0" />
+                        <Button fx:id="btnAddPants" disable="true" minWidth="-Infinity" mnemonicParsing="false" onAction="#handlebtnAddPants" prefHeight="26.0" prefWidth="60.0" text="Add">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+                  <ScrollPane layoutX="8.0" layoutY="18.0" prefHeight="125.0" prefWidth="806.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <content>
+                        <AnchorPane nodeOrientation="LEFT_TO_RIGHT" prefHeight="110.0" prefWidth="872.0">
+                           <children>
+                              <ImageView fitHeight="75.0" fitWidth="79.0" layoutX="150.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Images/adidas%20pants.jpg" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="75.0" fitWidth="79.0" layoutX="22.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Images/carhartt%20pants.jpg" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="74.0" fitWidth="74.0" layoutX="284.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Images/chinos.jpg" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="81.0" fitWidth="90.0" layoutX="455.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Images/Jeans.jpg" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="79.0" fitWidth="89.0" layoutX="620.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Images/joggers.jpg" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="78.0" fitWidth="81.0" layoutX="770.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Images/nike%20pants.jpg" />
+                                 </image>
+                              </ImageView>
+                              <RadioButton fx:id="rdbCarhartt" layoutX="5.0" layoutY="6.0" mnemonicParsing="false" opacity="0.0" prefHeight="70.0" prefWidth="88.0">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="Pants" />
+                                 </toggleGroup>
+                              </RadioButton>
+                              <RadioButton fx:id="rdbAdidasJoggers" layoutX="131.0" layoutY="-3.0" mnemonicParsing="false" opacity="0.0" prefHeight="82.0" prefWidth="86.0" toggleGroup="$Pants" />
+                              <RadioButton fx:id="rdbJeans" layoutX="448.0" layoutY="-3.0" mnemonicParsing="false" opacity="0.0" prefHeight="85.0" prefWidth="78.0" toggleGroup="$Pants" />
+                              <RadioButton fx:id="rdbSweatpants" layoutX="613.0" layoutY="-2.0" mnemonicParsing="false" opacity="0.0" prefHeight="84.0" prefWidth="77.0" toggleGroup="$Pants" />
+                              <RadioButton fx:id="rdbNikeJoggers" layoutX="768.0" layoutY="-2.0" mnemonicParsing="false" opacity="0.0" prefHeight="82.0" prefWidth="81.0" toggleGroup="$Pants" />
+                              <RadioButton fx:id="rdbChinos" layoutX="284.0" layoutY="-4.0" mnemonicParsing="false" opacity="0.0" prefHeight="84.0" prefWidth="73.0" toggleGroup="$Pants" />
+                              <Label fx:id="lblCarharrt" layoutX="14.0" layoutY="74.0" text="Carharrt" />
+                              <Label fx:id="lblAdidasJoggers" layoutX="134.0" layoutY="77.0" text="Adidas Joggers" />
+                              <Label fx:id="lblChinos" layoutX="302.0" layoutY="77.0" text="Chinos" />
+                              <Label fx:id="lblJeans" layoutX="461.0" layoutY="77.0" text="Levi Jeans" />
+                              <Label fx:id="lblSweatPants" layoutX="621.0" layoutY="77.0" text="Sweatpants" />
+                              <Label fx:id="lblNikeJoggers" layoutX="768.0" layoutY="77.0" text="Nike Joggers" />
+                              <Label fx:id="lblMessageCarhartt" layoutX="29.0" layoutY="77.0" text="Label" AnchorPane.bottomAnchor="0.6000000000000085" />
+                              <Label fx:id="lblMessageAdidasJogger" layoutX="160.0" layoutY="92.0" text="Label" AnchorPane.bottomAnchor="0.8000000000000114" />
+                              <Label fx:id="lblMessageChinos" layoutX="306.0" layoutY="92.0" text="Label" AnchorPane.bottomAnchor="0.8000000000000114" />
+                              <Label fx:id="lblMessageJeans" layoutX="473.0" layoutY="92.0" text="Label" AnchorPane.bottomAnchor="0.8000000000000114" />
+                              <Label fx:id="lblMessageSweatPants" layoutX="637.0" layoutY="92.0" text="Label" AnchorPane.bottomAnchor="0.8000000000000114" />
+                              <Label fx:id="lblMessageNikeJoggers" layoutX="789.0" layoutY="92.0" text="label" AnchorPane.bottomAnchor="0.8000000000000114" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </ScrollPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutY="380.0" prefHeight="177.0" prefWidth="800.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <Label fx:id="lblShirts2" layoutX="375.0" layoutY="5.0" text="SHOES">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <HBox layoutY="109.0" prefHeight="35.0" prefWidth="792.0" spacing="15.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <children>
+                        <Region prefHeight="26.0" prefWidth="471.0" HBox.hgrow="ALWAYS" />
+                        <Label prefHeight="18.0" prefWidth="111.0" text="Enter a size:" />
+                        <TextField fx:id="txtShoeSize" prefHeight="26.0" prefWidth="48.0" />
+                        <Button fx:id="btnAddShoes" disable="true" minWidth="-Infinity" mnemonicParsing="false" onAction="#handlebtnAddShoes" prefHeight="26.0" prefWidth="60.0" text="Add">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+                  <ScrollPane layoutY="23.0" prefHeight="117.0" prefWidth="800.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <content>
+                        <AnchorPane nodeOrientation="LEFT_TO_RIGHT" prefHeight="115.0" prefWidth="877.0">
+                           <children>
+                              <ImageView fitHeight="75.0" fitWidth="79.0" layoutX="136.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Images/airforce.jpg" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="75.0" fitWidth="79.0" layoutX="14.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Images/convers.jpg" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="74.0" fitWidth="74.0" layoutX="281.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Images/doc%20martins.jpg" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="81.0" fitWidth="90.0" layoutX="442.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Images/jordans.jpg" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="79.0" fitWidth="89.0" layoutX="618.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Images/vans.jpg" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="78.0" fitWidth="81.0" layoutX="770.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Images/adidas%20gazelle.jpg" />
+                                 </image>
+                              </ImageView>
+                              <RadioButton fx:id="rdbConverse" layoutY="8.0" mnemonicParsing="false" opacity="0.0" prefHeight="70.0" prefWidth="88.0" text="rdbConverse">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="Shoes" />
+                                 </toggleGroup>
+                              </RadioButton>
+                              <RadioButton fx:id="rdbNikeAirforce" layoutX="131.0" mnemonicParsing="false" opacity="0.0" prefHeight="82.0" prefWidth="86.0" text="rdnAirforce" toggleGroup="$Shoes" />
+                              <RadioButton fx:id="rdbAirJordan" layoutX="443.0" layoutY="-2.0" mnemonicParsing="false" opacity="0.0" prefHeight="83.0" prefWidth="78.0" text="rdbJordan" toggleGroup="$Shoes" />
+                              <RadioButton fx:id="rdbVans" layoutX="613.0" layoutY="-2.0" mnemonicParsing="false" opacity="0.0" prefHeight="84.0" prefWidth="77.0" text="rdbVans" toggleGroup="$Shoes" />
+                              <RadioButton fx:id="rdbAdidasGazelle" layoutX="770.0" layoutY="2.0" mnemonicParsing="false" opacity="0.0" prefHeight="82.0" prefWidth="81.0" text="rdbGazelle" toggleGroup="$Shoes" />
+                              <RadioButton fx:id="rdbDocMartin" layoutX="281.0" mnemonicParsing="false" opacity="0.0" prefHeight="84.0" prefWidth="73.0" text="rdbDocMartin" toggleGroup="$Shoes" />
+                              <Label fx:id="lblConvers" layoutX="14.0" layoutY="73.0" text="Convers" />
+                              <Label fx:id="lblNikeAirForce" layoutX="131.0" layoutY="73.0" text="Nike Airforce" />
+                              <Label fx:id="lblDocMartins" layoutX="288.0" layoutY="75.0" text="Doc Martin" />
+                              <Label fx:id="lblAirJordans" layoutX="452.0" layoutY="73.0" text="Air Jordans" />
+                              <Label fx:id="lblVans" layoutX="632.0" layoutY="76.0" text="Vans" />
+                              <Label fx:id="lblAdidasGazelle" layoutX="758.0" layoutY="76.0" text="Adidas Gazelle" />
+                              <Label fx:id="lblMessageConvers" layoutX="22.0" layoutY="92.0" text="Label" AnchorPane.bottomAnchor="5.6000000000000085" />
+                              <Label fx:id="lblMessageNikeAirforce" layoutX="152.0" layoutY="92.0" text="Label" AnchorPane.bottomAnchor="5.6000000000000085" />
+                              <Label fx:id="lblMessageDocMartin" layoutX="304.0" layoutY="92.0" text="Label" AnchorPane.bottomAnchor="5.6000000000000085" />
+                              <Label fx:id="lblMessageAirJordan" layoutX="469.0" layoutY="92.0" text="Label" AnchorPane.bottomAnchor="5.6000000000000085" />
+                              <Label fx:id="lblMessageVans" layoutX="631.0" layoutY="92.0" text="Label" AnchorPane.bottomAnchor="5.6000000000000085" />
+                              <Label fx:id="lblMessageAdidasGazelle" layoutX="783.0" layoutY="92.0" text="Label" AnchorPane.bottomAnchor="5.6000000000000085" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </ScrollPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="anchBasket" layoutY="72.0" prefHeight="582.0" prefWidth="806.0" visible="false">
+         <children>
+            <AnchorPane fx:id="anchPaymentDetails" layoutX="7.0" layoutY="291.0" prefHeight="285.0" prefWidth="794.0">
+               <children>
+                  <TextField fx:id="txtCardHolderName" layoutX="201.0" layoutY="62.0" prefHeight="26.0" prefWidth="210.0" />
+                  <Label layoutX="41.0" layoutY="66.0" text="Card Holder Name:" />
+                  <TextField fx:id="txtCardNumber" layoutX="201.0" layoutY="114.0" prefHeight="26.0" prefWidth="210.0" />
+                  <Label layoutX="41.0" layoutY="118.0" text="Card Number:" />
+                  <Label layoutX="41.0" layoutY="167.0" text="Expiry Date:" />
+                  <DatePicker fx:id="dpExpiryDatePayment" layoutX="201.0" layoutY="162.0" prefHeight="26.0" prefWidth="142.0" />
+                  <TextField fx:id="txtCVVNumber" layoutX="201.0" layoutY="210.0" prefHeight="26.0" prefWidth="62.0" />
+                  <Label layoutX="47.0" layoutY="214.0" text="CVV:" />
+                  <Button fx:id="btnDefaultMethod" layoutX="589.0" layoutY="32.0" mnemonicParsing="false" onAction="#handlebtnUseDefaultMethod" prefHeight="26.0" prefWidth="166.0" text="Use Default Method" />
+                  <Button fx:id="btnConfirmPayment" layoutX="589.0" layoutY="103.0" mnemonicParsing="false" onAction="#ConfirmPayment" prefHeight="26.0" prefWidth="166.0" text="Confirm Payment" />
+                  <Button fx:id="btnClearPayment" layoutX="589.0" layoutY="176.0" mnemonicParsing="false" onAction="#handlebtnClearPayment" prefHeight="26.0" prefWidth="166.0" text="Clear" />
+                  <Label fx:id="lblCardNo" layoutX="201.0" layoutY="133.0" prefHeight="18.0" prefWidth="210.0" text="Label" textFill="#e70505">
+                     <font>
+                        <Font size="9.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblCVV" layoutX="201.0" layoutY="237.0" prefHeight="18.0" prefWidth="210.0" text="Label" textFill="#e70505">
+                     <font>
+                        <Font size="9.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="cbxPaymentCardType" layoutX="201.0" layoutY="14.0" prefHeight="26.0" prefWidth="210.0" />
+                  <Label layoutX="44.0" layoutY="18.0" text="Card Type:" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="anchBasketView" layoutX="7.0" layoutY="6.0" prefHeight="286.0" prefWidth="794.0">
+               <children>
+                  <Button fx:id="btnCheckout" layoutX="589.0" layoutY="225.0" mnemonicParsing="false" onAction="#handlebtnCheckout" prefHeight="26.0" prefWidth="165.0" text="Checkout" />
+                  <TextArea fx:id="txtBasket" editable="false" layoutX="14.0" layoutY="14.0" prefHeight="200.0" prefWidth="563.0" />
+                  <TextField fx:id="txtTotal" editable="false" layoutX="491.0" layoutY="226.0" prefHeight="26.0" prefWidth="88.0" />
+                  <Label fx:id="lbl€‎" layoutX="410.0" layoutY="230.0" prefHeight="18.0" prefWidth="78.0" text="Total(€‎)" />
+                  <Button fx:id="btnDeleteItem" layoutX="135.0" layoutY="226.0" mnemonicParsing="false" onAction="#DeleteLastItem" prefHeight="26.0" prefWidth="274.0" text="Delete Most Recent Item from Order" />
+                  <Button fx:id="btnClearOrder" layoutX="4.0" layoutY="227.0" mnemonicParsing="false" onAction="#ClearOrder" prefHeight="26.0" prefWidth="122.0" text="Clear Order" />
+                  <Label fx:id="lblConvertCurrency" layoutX="599.0" layoutY="21.0" prefHeight="18.0" prefWidth="195.0" text="Label">
+                     <font>
+                        <Font size="10.0" />
+                     </font></Label>
+                  <Button fx:id="btnConvertCurrency" layoutX="599.0" layoutY="54.0" mnemonicParsing="false" onAction="#ConvertCurrency" prefHeight="26.0" prefWidth="142.0" text="Convert Currency" />
+               </children>
+            </AnchorPane>
+         </children></AnchorPane>
+      <AnchorPane fx:id="anchOrders" layoutY="72.0" prefHeight="582.0" prefWidth="806.0">
+         <children>
+            <TextArea fx:id="txtOrderView" editable="false" layoutX="14.0" layoutY="326.0" prefHeight="242.0" prefWidth="779.0" />
+            <TextField fx:id="txtCustomerOrderSearch" layoutX="364.0" layoutY="150.0" prefHeight="26.0" prefWidth="78.0" promptText=" e.g: 9" />
+            <Label layoutX="369.0" layoutY="119.0" text="Search Order:" textFill="#ca7df9">
+               <font>
+                  <Font name="Baskerville Old Face" size="12.0" />
+               </font>
+            </Label>
+            <Button layoutX="332.0" layoutY="251.0" mnemonicParsing="false" onAction="#handlebtnCancelOrder" prefHeight="26.0" prefWidth="142.0" text="Cancel Order" />
+            <Button fx:id="btnSearchOrder" layoutX="332.0" layoutY="208.0" mnemonicParsing="false" onAction="#handlebtnSearchCustomerOrders" prefHeight="26.0" prefWidth="142.0" text="Search" />
+            <Label layoutX="143.0" layoutY="34.0" prefHeight="18.0" prefWidth="651.0" text="Orders after Delivery Date can not be canceled. For refunding product must be shipped back" />
+            <Label layoutX="168.0" layoutY="68.0" prefHeight="18.0" prefWidth="627.0" text="Any queries for missing parcels or late delivery dates please use help to voice concerns" />
+            <Button fx:id="btnClearOrderSearch" layoutX="332.0" layoutY="291.0" mnemonicParsing="false" onAction="#btnClearOrderSearch" prefHeight="26.0" prefWidth="142.0" text="Clear" />
+            <Label layoutX="251.0" layoutY="156.0" text="Order ID:" textFill="#ca7df9">
+               <font>
+                  <Font name="Baskerville Old Face" size="12.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+      <AnchorPane fx:id="anchHelp" layoutY="72.0" prefHeight="582.0" prefWidth="806.0" visible="false">
+         <children>
+            <TextArea fx:id="txtComplaints" layoutY="312.0" prefHeight="270.0" prefWidth="806.0" promptText="Please Type here:" />
+            <BorderPane prefHeight="46.0" prefWidth="806.0" style="-fx-background-color: lavender;">
+               <center>
+                  <Label prefHeight="18.0" prefWidth="518.0" text="Here at Forever 22 we want to know if we can do better please inform us" textFill="#ca7df9" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font name="Baskerville Old Face" size="15.0" />
+                     </font>
+                  </Label>
+               </center>
+            </BorderPane>
+            <Button fx:id="btnSendComplaint" layoutX="277.0" layoutY="174.0" mnemonicParsing="false" onAction="#handlebtnSendComplaint" prefHeight="46.0" prefWidth="243.0" style="-fx-background-color: #ca7df9;" text="Send Complaint" textFill="#181718">
+               <font>
+                  <Font name="Baskerville Old Face" size="12.0" />
+               </font></Button>
+            <TextField fx:id="txtEmailComplaint" layoutX="277.0" layoutY="105.0" prefHeight="26.0" prefWidth="243.0" />
+            <Label layoutX="112.0" layoutY="110.0" prefHeight="18.0" prefWidth="60.0" text="Email:" />
+            <Label fx:id="lblResponse1" layoutX="237.0" layoutY="248.0" prefHeight="18.0" prefWidth="470.0" text="The managr should respond to your complaint in a week" />
+            <Label fx:id="lblResponse2" layoutX="277.0" layoutY="282.0" text="we at Forever 22 thank you for your patience">
+               <font>
+                  <Font name="Baskerville Old Face" size="13.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+      <Label fx:id="lblDisplayOrder" alignment="CENTER" layoutX="7.0" layoutY="627.0" prefHeight="18.0" prefWidth="785.0" text="Label" />
+      <Button fx:id="btnStore" blendMode="MULTIPLY" layoutY="1.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="26.0" prefWidth="66.0" style="-fx-background-color: white;" text="Store" textFill="#202020" />
+      <Button fx:id="btnBasket" blendMode="MULTIPLY" layoutX="66.0" layoutY="1.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="26.0" prefWidth="66.0" style="-fx-background-color: white;" text="Basket" textFill="#202020" />
+      <Button fx:id="btnOrders" blendMode="MULTIPLY" layoutX="132.0" layoutY="1.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="26.0" prefWidth="66.0" style="-fx-background-color: white;" text="Orders" textFill="#202020" />
+      <Button fx:id="btnHelp" blendMode="MULTIPLY" layoutX="198.0" layoutY="1.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="26.0" prefWidth="66.0" style="-fx-background-color: white;" text="Help" textFill="#202020" />
+      <Button fx:id="btnLogOut" blendMode="MULTIPLY" layoutX="264.0" layoutY="1.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="26.0" prefWidth="88.0" style="-fx-background-color: white;" text="Log Out" textFill="#202020" />
+      <Label fx:id="lblWelcome" layoutX="583.0" layoutY="6.0" prefHeight="18.0" prefWidth="218.0" text="Label" />
+      <Label layoutX="-81.0" layoutY="190.0" prefHeight="18.0" prefWidth="88.0" text="Plain T-Shirt" />
+      <Label fx:id="lblDate" layoutX="352.0" layoutY="7.0" prefHeight="18.0" prefWidth="122.0" text="Label" textFill="ROYALBLUE" />
+      <Label fx:id="lblTime" layoutX="480.0" layoutY="7.0" prefHeight="18.0" prefWidth="102.0" text="Label" textFill="ROYALBLUE" />
+    </children>
+</AnchorPane>

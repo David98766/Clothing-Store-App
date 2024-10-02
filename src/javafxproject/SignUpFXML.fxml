@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="947.0" prefWidth="618.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxproject.SignUpFXMLController">
+   <children>
+      <TextField fx:id="txtEmail" layoutX="227.0" layoutY="86.0" prefHeight="26.0" prefWidth="245.0" />
+      <Label layoutX="46.0" layoutY="40.0" />
+      <Label layoutX="225.0" layoutY="17.0" prefHeight="46.0" prefWidth="195.0" text="Forever 22" textFill="#ca7df9">
+         <font>
+            <Font name="Baskerville Old Face" size="37.0" />
+         </font>
+      </Label>
+      <Label layoutX="188.0" layoutY="54.0" prefHeight="18.0" prefWidth="287.0" text="Please enter your personal details below" textFill="ROYALBLUE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Label layoutX="98.0" layoutY="90.0" text="Email:" textFill="#ca7df9">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Label layoutX="93.0" layoutY="132.0" text="Username:" textFill="#ca7df9">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <TextField fx:id="txtUserName" layoutX="228.0" layoutY="128.0" prefHeight="26.0" prefWidth="245.0" />
+      <PasswordField fx:id="pwfPassword1" layoutX="227.0" layoutY="172.0" prefHeight="26.0" prefWidth="246.0" />
+      <Label layoutX="89.0" layoutY="176.0" text="Choose a password:" textFill="#ca7df9">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Label layoutX="91.0" layoutY="214.0" text="Confirm password:" textFill="#ca7df9">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <PasswordField fx:id="pwfPassword2" layoutX="227.0" layoutY="210.0" prefHeight="26.0" prefWidth="246.0" />
+      <TextField fx:id="txtStreetName" layoutX="230.0" layoutY="720.0" prefHeight="26.0" prefWidth="245.0" />
+      <TextField fx:id="txtHouseNumber" layoutX="230.0" layoutY="681.0" prefHeight="26.0" prefWidth="245.0" />
+      <Label layoutX="90.0" layoutY="729.0" text="Street Name:" textFill="#ca7df9">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Label layoutX="90.0" layoutY="691.0" text="House Number:" textFill="#ca7df9">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Label layoutX="182.0" layoutY="652.0" prefHeight="18.0" prefWidth="389.0" text="Please enter your standard delivery address below" textFill="ROYALBLUE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <TextField fx:id="txtCity" layoutX="230.0" layoutY="763.0" prefHeight="26.0" prefWidth="245.0" />
+      <Label layoutX="91.0" layoutY="818.0" text="Country:" textFill="#ca7df9">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Label layoutX="90.0" layoutY="772.0" text="City:" textFill="#ca7df9">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <ChoiceBox fx:id="cbCountry" layoutX="230.0" layoutY="809.0" prefHeight="26.0" prefWidth="246.0" />
+      <CheckBox fx:id="cbTermsAndConditions" layoutX="97.0" layoutY="853.0" mnemonicParsing="false" text="I agree to Forever22's Terms and Conditions." textFill="ROYALBLUE">
+         <tooltip>
+            <Tooltip fx:id="ttTermsAndConditions" text="Please ensure all details are filled out first and password and confirm password match" />
+         </tooltip>
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font></CheckBox>
+      <Label layoutX="92.0" layoutY="290.0" text="Last Name:" textFill="#ca7df9">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Button fx:id="btnJoinForever22" layoutX="263.0" layoutY="894.0" mnemonicParsing="false" onAction="#handlebtnJoinForever22" prefHeight="26.0" prefWidth="118.0" text="Join Forever22" textFill="#ca7df9">
+         <tooltip>
+            <Tooltip fx:id="ttJoinForever22" text="Please ensure all details are filled out correctly" />
+         </tooltip>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Label layoutX="92.0" layoutY="251.0" text="First Name:" textFill="#ca7df9">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <TextField fx:id="txtFirstName" layoutX="228.0" layoutY="247.0" prefHeight="26.0" prefWidth="245.0" />
+      <TextField fx:id="txtLastName" layoutX="228.0" layoutY="286.0" prefHeight="26.0" prefWidth="245.0" />
+      <Button fx:id="btnClear" layoutX="446.0" layoutY="894.0" mnemonicParsing="false" onAction="#handlebtnClear" prefHeight="26.0" prefWidth="56.0" text="Clear" textFill="#ca7df9">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <ChoiceBox fx:id="chxCardType" layoutX="229.0" layoutY="516.0" prefHeight="26.0" prefWidth="246.0" />
+      <TextField fx:id="txtCardNumber" layoutX="228.0" layoutY="557.0" prefHeight="26.0" prefWidth="246.0">
+         <tooltip>
+            <Tooltip fx:id="ttCardNumber" text="Empty Tooltip" />
+         </tooltip></TextField>
+      <Label layoutX="102.0" layoutY="520.0" prefHeight="18.0" prefWidth="74.0" text="Card Type:" textFill="#ca7df9">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="100.0" layoutY="561.0" prefHeight="18.0" prefWidth="95.0" text="Card Number:" textFill="#ca7df9">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="dpExpiryDate" layoutX="228.0" layoutY="605.0" prefHeight="26.0" prefWidth="246.0" />
+      <Label layoutX="100.0" layoutY="609.0" prefHeight="18.0" prefWidth="95.0" text="Expiry Date:" textFill="#ca7df9">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblCardNumber" layoutX="229.0" layoutY="583.0" prefHeight="18.0" prefWidth="287.0" text="lblCardNumber" textFill="#ec0a0a">
+         <font>
+            <Font size="9.0" />
+         </font></Label>
+      <Label fx:id="lblUserName" layoutX="225.0" layoutY="154.0" prefHeight="18.0" prefWidth="287.0" text="lblUserName" textFill="#ec0a0a">
+         <font>
+            <Font size="9.0" />
+         </font>
+      </Label>
+      <Label layoutX="227.0" layoutY="320.0" prefHeight="18.0" prefWidth="342.0" text="Lets make your Experience Comfortable" textFill="ROYALBLUE">
+         <font>
+            <Font name="Baskerville Old Face" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="197.0" layoutY="338.0" prefHeight="18.0" prefWidth="316.0" text="Share your size Preference to make the Process Faster" textFill="ROYALBLUE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="231.0" layoutY="489.0" prefHeight="18.0" prefWidth="389.0" text="Please List Default Method of Payment" textFill="ROYALBLUE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="chxShirtSize" layoutX="227.0" layoutY="364.0" prefHeight="26.0" prefWidth="246.0" />
+      <Label layoutX="95.0" layoutY="368.0" text="Shirt Size:" textFill="#ca7df9">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtShoeSize" layoutX="227.0" layoutY="402.0" prefHeight="26.0" prefWidth="245.0" />
+      <Label layoutX="96.0" layoutY="406.0" prefHeight="18.0" prefWidth="74.0" text="Shoe Size:" textFill="#ca7df9">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtWaistSize" layoutX="227.0" layoutY="446.0" prefHeight="26.0" prefWidth="245.0" />
+      <Label layoutX="96.0" layoutY="450.0" prefHeight="18.0" prefWidth="74.0" text="Waist Size:" textFill="#ca7df9">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblShoeSize" layoutX="229.0" layoutY="428.0" prefHeight="18.0" prefWidth="287.0" text="lblShoeSize" textFill="#ec0a0a">
+         <font>
+            <Font size="9.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblWaistSize" layoutX="225.0" layoutY="472.0" prefHeight="18.0" prefWidth="287.0" text="lblWaistSize" textFill="#ec0a0a">
+         <font>
+            <Font size="9.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
